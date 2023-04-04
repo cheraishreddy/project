@@ -1,0 +1,39 @@
+class pair{
+    int i,j,ele,len;
+    pair(int i,int j,int ele,int len){
+        this.i=i;this.j=j;this.ele=ele;this.len=len;
+    }
+}
+class Solution {
+    static pair bfs(int[][] mat,int i,int j,int n,int m){
+        boolean vis[][]=new boolean[n][m];
+        Queue<pair> q=new LinkedList<>();
+        vis[i][j]=true;
+        q.add(new pair(i,j,-1,0));
+        pair q1=;
+    
+        while(!q.isEmpty()){
+           pair p=q.poll();
+            if(p.i<0 || p.j<0 || p.i>=n || p.j>=m || mat[i][j]<=p.ele) continue;
+            vis[i][j]=true;
+            if(p.len>q.len) p=q;
+            q.add(new pair(i-1,j,mat[i][j],p.len+1));
+            q.add(new pair(i,j-1,mat[i][j],p.len+1));
+            q.add(new pair(i+1,j,mat[i][j],p.len+1));
+            q.add(new pair(i,j+1,mat[i][j],p.len+1));
+        }
+        return q1;
+    }
+    public int longestIncreasingPath(int[][] matrix) {
+        int n=matrix.length,m=matrix[0].length;
+         int ans=1;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+              pair p=  bfs(matrix,i,j,n,m);
+              System.out.println(p.i+" "+p.j+" "+i+" "+j);
+              ans=Math.max(ans,Math.abs(p.i-i)+Math.abs(p.j-j)+1);
+            }
+        }
+        return ans;
+        }
+    }

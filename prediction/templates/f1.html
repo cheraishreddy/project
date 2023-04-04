@@ -1,0 +1,22 @@
+<html>
+{% load static %}
+<head><script src="{% static 'app.js' %}"></script>
+<title> house price prediction</title>
+<link rel=stylesheet href="{% static 'style.css' %}">
+</head>
+<body onload="c()">
+<center><center><form method="get" action= "/prediction/externals">
+<h1><span> house price prediction</span></h1></p>
+<pre>
+<span id="t1">sqft</span> :   <input type="text" name="sqft" required></p>
+<span id="t1">bhk</span>  :   <input type="text" name="bhk" required></p>
+<span id="t1">bath</span> :   <input type="text" name="bath" required></p>
+<span>select location:</span>
+<div id="t"></div></pre>
+<div><span>price:{{data}}</span></div>
+<input type="submit" value="click">
+
+</form></center></center>
+
+</body>
+</html>

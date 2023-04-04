@@ -1,0 +1,31 @@
+
+<html>
+{%load static %}
+<head>
+<link rel=stylesheet href="{% static 'old.css' %}">
+<script src="{% static 'ap1.js' %}"></script>
+</head>
+<body onload="f()">
+<div id="d1">
+<img src="{% static '1.jpg' %}" height="100" width="100" id="i1" ></img></p>
+<h id="h1">dhoni</h>
+</div>
+<div id="d2">
+<img src="{% static 'rohit-m.jpg' %}" height="100" width="100" id="i2"></img></p>
+<h id="h2">rohith sharma</h> 
+</div>  
+<div id="d3">
+<img src="{% static 'R.jpg' %}" height="100" width="100" id="i3" ></img></p>
+<h id="h3">messi </h>
+</div>
+<label id="l">drag and drop here</label>
+<div id="d"> 
+
+<form action=""  method="post" enctype="multipart/form-data">
+<input type="file" name="file" id="f">
+<input type="submit" value="upload">
+</form>
+</div>
+<h id="b">{{data}}</h>
+</body>
+</html>
