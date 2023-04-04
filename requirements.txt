@@ -1,0 +1,7 @@
+django
+opencv-python
+numpy
+pandas
+matplotlib
+tensorflow
+gunicorn
