@@ -5,6 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.files.storage import FileSystemStorage
 import cv2
 import os
+import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
 import pickle
