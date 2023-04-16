@@ -8,6 +8,7 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import pickle
+import joblib
 face=cv2.CascadeClassifier("staticfiles/haar-cascade-files-master/haar-cascade-files-master/haarcascade_frontalface_default.xml")
 eye=cv2.CascadeClassifier("staticfiles/haar-cascade-files-master/haar-cascade-files-master/haarcascade_eye.xml")
 def load(request):
@@ -34,8 +35,7 @@ def fun(request):
 			return render(request,"load.html",{"data":0})
 	except:
 		pass
-	with open("classify.txt","rb") as f:
-		model=pickle.load(f)
+	model=joblib.load("c1.pkl")
 	img=cv2.resize(img,(64,64))
 	t=np.array([img])
 	data=np.argmax(model.predict(t))
