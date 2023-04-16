@@ -19,7 +19,11 @@ def fun(request):
 		t=loader.get_template("load.html")
 		return render(request,"load.html")
 	req=request.POST
-	img=request.FILES['file']
+	img=""
+	try:
+		img=request.FILES['file']
+	except:
+		return render(request,"load.html",{"data":0})
 	fs=FileSystemStorage()
 	fs.save(img.name,img)
 	url="classification/static/media"+"/"+str(img.name) 
