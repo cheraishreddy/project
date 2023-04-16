@@ -34,7 +34,7 @@ def fun(request):
 			return render(request,"load.html",{"data":0})
 	except:
 		pass
-	with open("C:/Users/chera\classify.txt","rb") as f:
+	with open("classify.txt","rb") as f:
 		model=pickle.load(f)
 	img=cv2.resize(img,(64,64))
 	t=np.array([img])
