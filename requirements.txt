@@ -6,5 +6,5 @@ matplotlib
 joblib
 tensorflow
 gunicorn
-cudnn
-cudatoolkit
+nvidia-cudnn
+cuda-python
