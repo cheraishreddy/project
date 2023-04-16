@@ -35,7 +35,7 @@ def fun(request):
 			return render(request,"load.html",{"data":0})
 	except:
 		pass
-	model=joblib.load("c1.pkl")
+	model=tf.keras.models.load_model("hello")
 	img=cv2.resize(img,(64,64))
 	t=np.array([img])
 	data=np.argmax(model.predict(t))
