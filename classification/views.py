@@ -22,7 +22,7 @@ def fun(request):
 	img=request.FILES['file']
 	fs=FileSystemStorage()
 	fs.save(img.name,img)
-	url=".\static\media"+"/"+str(img.name) 
+	url="classification/static/media"+"/"+str(img.name) 
 	img=fun1(url)
 	try:
 		if(img==None):
