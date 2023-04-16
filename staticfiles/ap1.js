@@ -7,6 +7,6 @@ if(b=="3"){
 document.getElementById("d2").style.background="green";document.getElementById("d2").style.animation="anime 0.1s 3";
 }
 if(b=="2"){ 
-document.getElementById("d3").style.background="green";document.getElementById("d3").classList.add("ani"); 
+document.getElementById("d3").style.background="green";document.getElementById("d3").style.animation="anime 0.1s 3; 
 }
 }
