@@ -3,5 +3,5 @@ opencv-python
 numpy
 pandas
 matplotlib
-tensorflow
+joblib
 gunicorn
