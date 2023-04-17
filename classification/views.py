@@ -9,8 +9,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import numpy as np
 import pickle
-import joblib
-os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+
 face=cv2.CascadeClassifier("staticfiles/haar-cascade-files-master/haar-cascade-files-master/haarcascade_frontalface_default.xml")
 eye=cv2.CascadeClassifier("staticfiles/haar-cascade-files-master/haar-cascade-files-master/haarcascade_eye.xml")
 def load(request):
