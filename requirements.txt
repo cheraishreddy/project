@@ -4,6 +4,7 @@ numpy
 pandas
 matplotlib
 joblib
-tensorflow
+tensorflow==2.0
 gunicorn
 keras
+
